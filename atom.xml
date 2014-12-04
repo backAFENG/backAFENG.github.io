@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[Mapleaf's 技术轩]]></title>
+  <title><![CDATA[Mapleaf's 博客]]></title>
   <subtitle><![CDATA[人生不是演戏，自己精彩就好]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://backafeng.github.io/"/>
-  <updated>2014-12-04T09:35:54.195Z</updated>
+  <updated>2014-12-04T09:37:49.503Z</updated>
   <id>http://backafeng.github.io/</id>
   
   <author>
