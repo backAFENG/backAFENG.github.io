@@ -4,7 +4,7 @@
   <subtitle><![CDATA[美丽新世界]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://backafeng.github.io/"/>
-  <updated>2014-12-04T08:26:22.522Z</updated>
+  <updated>2014-12-04T08:54:32.045Z</updated>
   <id>http://backafeng.github.io/</id>
   
   <author>
@@ -13,21 +13,6 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
-  
-  <entry>
-    <title><![CDATA[My New Post]]></title>
-    <link href="http://backafeng.github.io/2014/12/04/My-New-Post/"/>
-    <id>http://backafeng.github.io/2014/12/04/My-New-Post/</id>
-    <published>2014-12-04T07:00:49.000Z</published>
-    <updated>2014-12-04T07:01:41.000Z</updated>
-    <content type="html"><![CDATA[<h5 id="哈哈，这是一个测试的版本">哈哈，这是一个测试的版本</h5>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h5 id="哈哈，这是一个测试的版本">哈哈，这是一个测试的版本</h5>
-]]>
-    </summary>
-    
-  </entry>
   
   <entry>
     <title><![CDATA[Hello World]]></title>
