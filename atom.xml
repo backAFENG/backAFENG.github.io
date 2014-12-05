@@ -4,7 +4,7 @@
   <subtitle><![CDATA[人生不是演戏，自己精彩就好]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://backafeng.github.io/"/>
-  <updated>2014-12-05T08:32:57.921Z</updated>
+  <updated>2014-12-05T08:36:30.575Z</updated>
   <id>http://backafeng.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://backafeng.github.io/2014/12/05/Xcode-6%E7%94%9F%E6%88%90ipa%E6%96%87%E4%BB%B6/"/>
     <id>http://backafeng.github.io/2014/12/05/Xcode-6生成ipa文件/</id>
     <published>2014-12-05T04:26:27.000Z</published>
-    <updated>2014-12-05T08:29:39.000Z</updated>
+    <updated>2014-12-05T08:36:09.000Z</updated>
     <content type="html"><![CDATA[<h4 id="随着Xcode6-1的普遍应用，随之而来的很多问题就会出现，这里来说一下如何在Xcode6-1上生成Ad-hoc_ipa。首先是要在你的开发者账号上生成一个。ipa的主要应用就是在你发布到AppStore之前，客户用来测试的。">随着Xcode6.1的普遍应用，随之而来的很多问题就会出现，这里来说一下如何在Xcode6.1上生成Ad-hoc ipa。首先是要在你的开发者账号上生成一个。ipa的主要应用就是在你发布到AppStore之前，客户用来测试的。</h4>
 <p>   好了，现在我们来说一下怎样在Xcode6.1下生成ipa文件。在这里，关于证书的配置，设备的添加就不在啰嗦的赘述了，直接从Ad-hoc profile生成开始。PS：如果你没有证书，请飞过。   </p>
 <ul>
@@ -29,72 +29,58 @@
 </li>
 <li><p>第三步：之后来配置App ID；<br>  <img src="file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/adhoc3.png" alt="adhoc3"><br>  在选择了App ID之后点击continue继续下一步。</p>
 </li>
-<li><p>第四步：添加发布应用者账号。   </p>
-<pre><code>  ![<span class="link_label">adhoc4</span>](<span class="link_url">file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/adhoc4.png</span>)
-</code></pre><p>  选择了发布者账号之后点击continue继续下一步。</p>
+<li><p>第四步：添加发布应用者账号。<br>  <img src="file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/adhoc4.png" alt="adhoc4"></p>
+<p>  选择了发布者账号之后点击continue继续下一步。</p>
 </li>
-<li><p>第五步：选择可以安装这个ipa文件的设备。（这里的设备都是你之前添加过UUID的设备）</p>
-<pre><code>  ![<span class="link_label">adhoc5</span>](<span class="link_url">file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/adhoc5.png</span>)
-</code></pre><p>  完成之后点击continue继续下一步。</p>
+<li><p>第五步：选择可以安装这个ipa文件的设备。（这里的设备都是你之前添加过UUID的设备）<br>  <img src="file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/adhoc5.png" alt="adhoc5"></p>
+<p>  完成之后点击continue继续下一步。</p>
 </li>
-<li><p>第六步：给你的Ad-Hoc profile文件添加名称。   </p>
-<pre><code>  ![<span class="link_label">adhoc6</span>](<span class="link_url">file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/adhoc6.png</span>)
-</code></pre><p>  填写名称之后，点击Generate生成profile文件。</p>
+<li><p>第六步：给你的Ad-Hoc profile文件添加名称。<br>  <img src="file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/adhoc6.png" alt="adhoc6"></p>
+<p>  填写名称之后，点击Generate生成profile文件。</p>
 </li>
-<li><p>第七步：下载这个profile文件到本地。   </p>
-<pre><code>  ![<span class="link_label">adhoc7</span>](<span class="link_url">file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/adhoc7.png</span>)
-</code></pre><p>  至此，Ad-Hoc Profile 文件的配置就已经完成。   </p>
-<p>  打开应用程序，双击Ad-Hoc Profile文件，就将该文件添加到了该应用中。然后点击file— &gt;show in Finder ,然后将上面生成的Profile文件复制到该文件夹下面。如图：</p>
-<pre><code>  ![<span class="link_label">pz1</span>](<span class="link_url">file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/pz1.png</span>)
-</code></pre></li>
+<li><p>第七步：下载这个profile文件到本地。<br>  <img src="file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/adhoc7.png" alt="adhoc7"></p>
+<p>  至此，Ad-Hoc Profile 文件的配置就已经完成。   </p>
+<p>  打开应用程序，双击Ad-Hoc Profile文件，就将该文件添加到了该应用中。然后点击file— &gt;show in Finder ,然后将上面生成的Profile文件复制到该文件夹下面。如图：<br>  <img src="file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/pz1.png" alt="pz1"></p>
+</li>
 </ul>
 <h4 id="下面我们就来说一下如何将程序进行成功的配置。">下面我们就来说一下如何将程序进行成功的配置。</h4>
 <ul>
 <li><p>1.点击Project，然后点击右侧的target（如本图的SFDownListAnimation）选择成project，然后点击info，在info下面configuration下添加一项，选择Duplicate “release” Configuration；然后添加命名。过程如图：</p>
-<p>  图一：</p>
-<pre><code>  ![<span class="link_label">Xcodepz1</span>](<span class="link_url">file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/Xcodepz1.png</span>)
-</code></pre></li>
+<p>  图一：<br>   <img src="file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/Xcodepz1.png" alt="Xcodepz1"></p>
+</li>
 </ul>
 <pre><code>图二：
-    ![Xcodepz2](<span class="keyword">file</span>:<span class="comment">///Users/wangshaofeng/Desktop/Ad-hoc%20profile/Xcodepz2.png)</span>
+![<span class="link_label">Xcodepz2</span>](<span class="link_url">file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/Xcodepz2.png</span>)
 
 
 图三：
-    ![Xcodepz3](<span class="keyword">file</span>:<span class="comment">///Users/wangshaofeng/Desktop/Ad-hoc%20profile/Xcodepz3.png)</span>
+![<span class="link_label">Xcodepz3</span>](<span class="link_url">file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/Xcodepz3.png</span>)
 
 
-图四：<span class="keyword">Project</span> -&gt;info选项配置结束后如下图。
-    ![Xcodepz4](<span class="keyword">file</span>:<span class="comment">///Users/wangshaofeng/Desktop/Ad-hoc%20profile/Xcodepz4.png)</span>
+图四：Project -&gt;info选项配置结束后如下图。
+![<span class="link_label">Xcodepz4</span>](<span class="link_url">file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/Xcodepz4.png</span>)
 </code></pre><ul>
-<li><p>2.当Project -&gt;info 配置结束后，选择的过程是：将Project改成Target，然后Target — &gt;build Setting —&gt;Code Signing,进行数据的配置。记住，不要去更改Debug和Release的配置。只要将ad-hoc Profile进行配置就行了。如图所示：</p>
-<pre><code>  ![<span class="link_label">Xcodepz5</span>](<span class="link_url">file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/Xcodepz5.png</span>)
-</code></pre></li>
-<li><p>3.打开info-plist文件（注意：这里容易出错,错误就是没有看清楚而打开的时test info-plist文件），这里一定是info-plist文件，而不是test info-plist文件。将plist文件中得 Application requires iPhone environment 项设置为YES，如果没有就添加这一项，并设置为YES。如图：</p>
-<pre><code>  ![<span class="link_label">pz2</span>](<span class="link_url">file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/pz2.png</span>)
-</code></pre></li>
-<li><p>4.点击Product— &gt;Scheme—&gt;Edit Scheme ，进去之后在左边栏选择Archive，然后将Build Configuration 设置为你添加的Profile（在这里是ad-hoc Profile），然后点击close。</p>
-<pre><code>  ![<span class="link_label">pz3</span>](<span class="link_url">file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/pz3.png</span>)
-</code></pre></li>
+<li><p>2.当Project -&gt;info 配置结束后，选择的过程是：将Project改成Target，然后Target — &gt;build Setting —&gt;Code Signing,进行数据的配置。记住，不要去更改Debug和Release的配置。只要将ad-hoc Profile进行配置就行了。如图所示：<br>  <img src="file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/Xcodepz5.png" alt="Xcodepz5"></p>
+</li>
+<li><p>3.打开info-plist文件（注意：这里容易出错,错误就是没有看清楚而打开的时test info-plist文件），这里一定是info-plist文件，而不是test info-plist文件。将plist文件中得 Application requires iPhone environment 项设置为YES，如果没有就添加这一项，并设置为YES。如图：<br>  <img src="file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/pz2.png" alt="pz2"></p>
+</li>
+<li><p>4.点击Product— &gt;Scheme—&gt;Edit Scheme ，进去之后在左边栏选择Archive，然后将Build Configuration 设置为你添加的Profile（在这里是ad-hoc Profile），然后点击close。<br>  <img src="file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/pz3.png" alt="pz3"></p>
+</li>
 </ul>
 <ul>
-<li>5.将target选择为Device，如果不是选择Device，在Product中Archive是不能够点击的，设置如图：<pre><code>  ![<span class="link_label">pz4</span>](<span class="link_url">file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/pz4.png</span>)
-</code></pre></li>
+<li>5.将target选择为Device，如果不是选择Device，在Product中Archive是不能够点击的，设置如图：<br>  <img src="file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/pz4.png" alt="pz4"></li>
 </ul>
 <ul>
-<li>6.点击Product— &gt;Archive,如果成功则会弹出Organizer—Archives界面，选择Export。如图：<pre><code>  ![<span class="link_label">pz5</span>](<span class="link_url">file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/pz5.png</span>)
-</code></pre></li>
+<li>6.点击Product— &gt;Archive,如果成功则会弹出Organizer—Archives界面，选择Export。如图：<br>  <img src="file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/pz5.png" alt="pz5"></li>
 </ul>
 <ul>
-<li>7.弹出界面后，选择Save for Ad Hoc Deployment,点击next。<pre><code>  ![<span class="link_label">pz6</span>](<span class="link_url">file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/pz6.png</span>)
-</code></pre></li>
+<li>7.弹出界面后，选择Save for Ad Hoc Deployment,点击next。<br>  <img src="file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/pz6.png" alt="pz6"></li>
 </ul>
 <ul>
-<li>8.选择开发团队账号，点击choose。<pre><code>  ![<span class="link_label">pz7</span>](<span class="link_url">file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/pz7.png</span>)
-</code></pre></li>
+<li>8.选择开发团队账号，点击choose。<br>  <img src="file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/pz7.png" alt="pz7"></li>
 </ul>
 <ul>
-<li>9.核对相关的发布信息，点击Export，生成ipa文件。<pre><code>  ![<span class="link_label">pz8</span>](<span class="link_url">file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/pz8.png</span>)
-</code></pre></li>
+<li>9.核对相关的发布信息，点击Export，生成ipa文件。<br>  <img src="file:///Users/wangshaofeng/Desktop/Ad-hoc%20profile/pz8.png" alt="pz8"></li>
 </ul>
 <ul>
 <li><p>10.为应用程序ipa文件选择位置和对ipa文件进行命名，这样就完成了利用Ad-hoc 生成ipa文件了。</p>
