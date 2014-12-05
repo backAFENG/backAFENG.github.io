@@ -4,7 +4,7 @@
   <subtitle><![CDATA[人生不是演戏，自己精彩就好]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://backafeng.github.io/"/>
-  <updated>2014-12-05T08:52:10.374Z</updated>
+  <updated>2014-12-05T08:54:17.054Z</updated>
   <id>http://backafeng.github.io/</id>
   
   <author>
@@ -19,11 +19,11 @@
     <link href="http://backafeng.github.io/2014/12/05/Xcode-6%E7%94%9F%E6%88%90ipa%E6%96%87%E4%BB%B6/"/>
     <id>http://backafeng.github.io/2014/12/05/Xcode-6生成ipa文件/</id>
     <published>2014-12-05T04:26:27.000Z</published>
-    <updated>2014-12-05T08:51:58.000Z</updated>
+    <updated>2014-12-05T08:54:08.000Z</updated>
     <content type="html"><![CDATA[<h4 id="随着Xcode6-1的普遍应用，随之而来的很多问题就会出现，这里来说一下如何在Xcode6-1上生成Ad-hoc_ipa。首先是要在你的开发者账号上生成一个。ipa的主要应用就是在你发布到AppStore之前，客户用来测试的。">随着Xcode6.1的普遍应用，随之而来的很多问题就会出现，这里来说一下如何在Xcode6.1上生成Ad-hoc ipa。首先是要在你的开发者账号上生成一个。ipa的主要应用就是在你发布到AppStore之前，客户用来测试的。</h4>
 <p>   好了，现在我们来说一下怎样在Xcode6.1下生成ipa文件。在这里，关于证书的配置，设备的添加就不在啰嗦的赘述了，直接从Ad-hoc profile生成开始。PS：如果你没有证书，请飞过。   </p>
 <ul>
-<li><p>首先，要在开发者中心进行Ad-hoc profile的配置和生成。并下载下来。<br>  <img src="file:///Users/wangshaofeng/hexo/source/img/Ad-hoc%20profile/adhoc1.png" alt="adhoc1"><br>按照上图的指引完成后，点击continue。   </p>
+<li><p>首先，要在开发者中心进行Ad-hoc profile的配置和生成。并下载下来。<br>  <img src="/img/adhoc1.png" alt="adhoc1"><br>按照上图的指引完成后，点击continue。   </p>
 </li>
 <li><p>第二步：然后选择Ad-Hoc，也就是生成profile的类型。<br>  <img src="file:///Users/wangshaofeng/hexo/source/img/Ad-hoc%20profile/adhoc2.png" alt="adhoc2"><br>  选择Ad-Hoc之后点击continue。</p>
 </li>
