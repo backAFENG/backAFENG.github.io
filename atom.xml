@@ -4,7 +4,7 @@
   <subtitle><![CDATA[人生不是演戏，自己精彩就好]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://backafeng.github.io/"/>
-  <updated>2014-12-05T02:34:13.602Z</updated>
+  <updated>2014-12-05T02:37:22.280Z</updated>
   <id>http://backafeng.github.io/</id>
   
   <author>
@@ -13,6 +13,23 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[test 2]]></title>
+    <link href="http://backafeng.github.io/2014/12/05/test-2/"/>
+    <id>http://backafeng.github.io/2014/12/05/test-2/</id>
+    <published>2014-12-05T02:35:51.000Z</published>
+    <updated>2014-12-05T02:37:14.000Z</updated>
+    <content type="html"><![CDATA[<p>sdfs<br> gfgsdg<br>  sdfsgf<br>  sfgs   </p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>sdfs<br> gfgsdg<br>  sdfsgf<br>  sfgs   </p>
+]]>
+    </summary>
+    
+      <category term="iOS blog" scheme="http://backafeng.github.io/categories/iOS-blog/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[is my test ]]></title>
