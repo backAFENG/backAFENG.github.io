@@ -4,12 +4,13 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hello World | Mapleaf&#39;s 博客</title>
+    <title>Xcode 6生成ipa文件 | Mapleaf&#39;s 博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Mapleaf">
     
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+    <meta name="description" content="随着Xcode6.1的普遍应用，随之而来的很多问题就会出现，这里来说一下如何在Xcode6.1上生成Ad-hoc ipa。首先是要在你的开发者账号上生成一个。ipa的主要应用就是在你发布到AppStore之前，客户用来测试的。
+   好了，现在我们来说一下怎样在Xcode6.1下生成ipa文件。在这">
     
     
     
@@ -70,14 +71,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/12/04/hello-world/" title="Hello World" itemprop="url">Hello World</a>
+      <a href="/2014/12/05/Xcode-6生成ipa文件/" title="Xcode 6生成ipa文件" itemprop="url">Xcode 6生成ipa文件</a>
   </h1>
   <p class="article-author">By
        
 		<a href="http://backafeng.github.io/about" title="Mapleaf" target="_blank" itemprop="author">Mapleaf</a>
 		
   <p class="article-time">
-    <time datetime="2014-12-04T06:59:20.000Z" itemprop="datePublished"> Published Dec 4 2014</time>
+    <time datetime="2014-12-05T04:26:27.000Z" itemprop="datePublished"> Published Dec 5 2014</time>
     
   </p>
 </header>
@@ -86,59 +87,108 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick_Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create_a_new_post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run_server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate_static_files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy_to_remote_sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#随着Xcode6-1的普遍应用，随之而来的很多问题就会出现，这里来说一下如何在Xcode6-1上生成Ad-hoc_ipa。首先是要在你的开发者账号上生成一个。ipa的主要应用就是在你发布到AppStore之前，客户用来测试的。"><span class="toc-number">1.</span> <span class="toc-text">随着Xcode6.1的普遍应用，随之而来的很多问题就会出现，这里来说一下如何在Xcode6.1上生成Ad-hoc ipa。首先是要在你的开发者账号上生成一个。ipa的主要应用就是在你发布到AppStore之前，客户用来测试的。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#下面我们就来说一下如何将程序进行成功的配置。"><span class="toc-number">2.</span> <span class="toc-text">下面我们就来说一下如何将程序进行成功的配置。</span></a></li></ol>
 		
 		</div>
 		
-		<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2>
-<h3 id="Create_a_new_post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+		<h4 id="随着Xcode6-1的普遍应用，随之而来的很多问题就会出现，这里来说一下如何在Xcode6-1上生成Ad-hoc_ipa。首先是要在你的开发者账号上生成一个。ipa的主要应用就是在你发布到AppStore之前，客户用来测试的。">随着Xcode6.1的普遍应用，随之而来的很多问题就会出现，这里来说一下如何在Xcode6.1上生成Ad-hoc ipa。首先是要在你的开发者账号上生成一个。ipa的主要应用就是在你发布到AppStore之前，客户用来测试的。</h4>
+<p>   好了，现在我们来说一下怎样在Xcode6.1下生成ipa文件。在这里，关于证书的配置，设备的添加就不在啰嗦的赘述了，直接从Ad-hoc profile生成开始。PS：如果你没有证书，请飞过。   </p>
+<ul>
+<li>首先，要在开发者中心进行Ad-hoc profile的配置和生成。并下载下来。</li>
+</ul>
+<p>按照上图的指引完成后，点击continue。   </p>
+<ul>
+<li><p>第二步：然后选择Ad-Hoc，也就是生成profile的类型。</p>
+<p>  选择Ad-Hoc之后点击continue。</p>
+</li>
+<li><p>第三步：之后来配置App ID；   </p>
+<p>  在选择了App ID之后点击continue继续下一步。</p>
+</li>
+<li><p>第四步：添加发布应用者账号。   </p>
+<p>  选择了发布者账号之后点击continue继续下一步。</p>
+</li>
+<li><p>第五步：选择可以安装这个ipa文件的设备。（这里的设备都是你之前添加过UUID的设备）</p>
+<p>  完成之后点击continue继续下一步。</p>
+</li>
+<li><p>第六步：给你的Ad-Hoc profile文件添加名称。   </p>
+<p>  填写名称之后，点击Generate生成profile文件。</p>
+</li>
+<li><p>第七步：下载这个profile文件到本地。   </p>
+<p>  至此，Ad-Hoc Profile 文件的配置就已经完成。   </p>
+<p>  打开应用程序，双击Ad-Hoc Profile文件，就将该文件添加到了该应用中。然后点击file— &gt;show in Finder ,然后将上面生成的Profile文件复制到该文件夹下面。如图：</p>
+</li>
+</ul>
+<h4 id="下面我们就来说一下如何将程序进行成功的配置。">下面我们就来说一下如何将程序进行成功的配置。</h4>
+<ul>
+<li><p>1.点击Project，然后点击右侧的target（如本图的SFDownListAnimation）选择成project，然后点击info，在info下面configuration下添加一项，选择Duplicate “release” Configuration；然后添加命名。过程如图：</p>
+<p>  图一：</p>
+</li>
+</ul>
+<pre><code>图二：
 
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
 
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+图三：
 
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+图四：Project -&gt;info选项配置结束后如下图。
+</code></pre><ul>
+<li>2.当Project -&gt;info 配置结束后，选择的过程是：将Project改成Target，然后Target — &gt;build Setting —&gt;Code Signing,进行数据的配置。记住，不要去更改Debug和Release的配置。只要将ad-hoc Profile进行配置就行了。如图所示：</li>
+</ul>
+<ul>
+<li>3.打开info-plist文件（注意：这里容易出错,错误就是没有看清楚而打开的时test info-plist文件），这里一定是info-plist文件，而不是test info-plist文件。将plist文件中得 Application requires iPhone environment 项设置为YES，如果没有就添加这一项，并设置为YES。如图：</li>
+</ul>
+<ul>
+<li>4.点击Product— &gt;Scheme—&gt;Edit Scheme ，进去之后在左边栏选择Archive，然后将Build Configuration 设置为你添加的Profile（在这里是ad-hoc Profile），然后点击close。</li>
+</ul>
+<ul>
+<li>5.将target选择为Device，如果不是选择Device，在Product中Archive是不能够点击的，设置如图：</li>
+</ul>
+<ul>
+<li>6.点击Product— &gt;Archive,如果成功则会弹出Organizer—Archives界面，选择Export。如图：</li>
+</ul>
+<ul>
+<li>7.弹出界面后，选择Save for Ad Hoc Deployment,点击next。</li>
+</ul>
+<ul>
+<li>8.选择开发团队账号，点击choose。</li>
+</ul>
+<ul>
+<li>9.核对相关的发布信息，点击Export，生成ipa文件。</li>
+</ul>
+<ul>
+<li><p>10.为应用程序ipa文件选择位置和对ipa文件进行命名，这样就完成了利用Ad-hoc 生成ipa文件了。</p>
+</li>
+<li><p>11.然后双击ipa文件加入iTunes，就可以通过iTunes来安装应用程序了。而上一步生成的ipa文件就可以发给客户，即使客户没有Mac，只有windows电脑只需要双击该ipa文件即可将该应用程序加入到iTunes中，然后点击应用程序—&gt;安装—&gt;同步即可将该应用程序安装到iPhone上。</p>
+</li>
+</ul>
   
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/iOS/">iOS</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Ad-hoc-iOS-ad-hoc生成ipa，ipa-Xcode-ipa/">Ad-hoc,iOS ad hoc生成ipa，ipa,Xcode ipa</a>
+  </div>
 
 </div>
 
 
 <div class="article-share" id="share">
 
-  <div data-url="http://backafeng.github.io/2014/12/04/hello-world/" data-title="Hello World | Mapleaf&#39;s 博客" data-tsina="null" class="share clearfix">
+  <div data-url="http://backafeng.github.io/2014/12/05/Xcode-6生成ipa文件/" data-title="Xcode 6生成ipa文件 | Mapleaf&#39;s 博客" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
 </footer>   	       
 	</article>
 	
-<nav class="article-nav clearfix">
- 
- <div class="prev" >
- <a href="/2014/12/05/test-Demo/" title="test Demo">
-  <strong>上一篇：</strong><br/>
-  <span>
-  test Demo</span>
-</a>
-</div>
-
-
-</nav>
-
 	
 
 </div>  
@@ -147,7 +197,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick_Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create_a_new_post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run_server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate_static_files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy_to_remote_sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#随着Xcode6-1的普遍应用，随之而来的很多问题就会出现，这里来说一下如何在Xcode6-1上生成Ad-hoc_ipa。首先是要在你的开发者账号上生成一个。ipa的主要应用就是在你发布到AppStore之前，客户用来测试的。"><span class="toc-number">1.</span> <span class="toc-text">随着Xcode6.1的普遍应用，随之而来的很多问题就会出现，这里来说一下如何在Xcode6.1上生成Ad-hoc ipa。首先是要在你的开发者账号上生成一个。ipa的主要应用就是在你发布到AppStore之前，客户用来测试的。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#下面我们就来说一下如何将程序进行成功的配置。"><span class="toc-number">2.</span> <span class="toc-text">下面我们就来说一下如何将程序进行成功的配置。</span></a></li></ol>
  
   </div>
 
@@ -160,7 +210,7 @@
 	<p class="asidetitle">Categories</p>
 		<ul>
 		
-			<li><a href="/categories/iOS-blog/" title="iOS blog">iOS blog<sup>2</sup></a></li>
+			<li><a href="/categories/iOS/" title="iOS">iOS<sup>1</sup></a></li>
 		
 		</ul>
 </div>
@@ -171,7 +221,7 @@
 	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
-			<li><a href="/tags/Object-C/" title="Object-C">Object-C<sup>1</sup></a></li>
+			<li><a href="/tags/Ad-hoc-iOS-ad-hoc生成ipa，ipa-Xcode-ipa/" title="Ad-hoc,iOS ad hoc生成ipa，ipa,Xcode ipa">Ad-hoc,iOS ad hoc生成ipa，ipa,Xcode ipa<sup>1</sup></a></li>
 		
 		</ul>
 </div>

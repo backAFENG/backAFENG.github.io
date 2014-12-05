@@ -4,7 +4,7 @@
   <subtitle><![CDATA[人生不是演戏，自己精彩就好]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://backafeng.github.io/"/>
-  <updated>2014-12-05T04:05:27.953Z</updated>
+  <updated>2014-12-05T04:46:15.502Z</updated>
   <id>http://backafeng.github.io/</id>
   
   <author>
@@ -15,120 +15,89 @@
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[test 5]]></title>
-    <link href="http://backafeng.github.io/2014/12/05/test-5/"/>
-    <id>http://backafeng.github.io/2014/12/05/test-5/</id>
-    <published>2014-12-05T02:38:24.000Z</published>
-    <updated>2014-12-05T02:38:24.000Z</updated>
-    <content type="html"><![CDATA[]]></content>
-    <summary type="html">
-    <![CDATA[]]>
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[test 4]]></title>
-    <link href="http://backafeng.github.io/2014/12/05/test-4/"/>
-    <id>http://backafeng.github.io/2014/12/05/test-4/</id>
-    <published>2014-12-05T02:38:15.000Z</published>
-    <updated>2014-12-05T02:38:15.000Z</updated>
-    <content type="html"><![CDATA[]]></content>
-    <summary type="html">
-    <![CDATA[]]>
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[test3]]></title>
-    <link href="http://backafeng.github.io/2014/12/05/test3/"/>
-    <id>http://backafeng.github.io/2014/12/05/test3/</id>
-    <published>2014-12-05T02:38:04.000Z</published>
-    <updated>2014-12-05T02:38:04.000Z</updated>
-    <content type="html"><![CDATA[]]></content>
-    <summary type="html">
-    <![CDATA[]]>
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[test 2]]></title>
-    <link href="http://backafeng.github.io/2014/12/05/test-2/"/>
-    <id>http://backafeng.github.io/2014/12/05/test-2/</id>
-    <published>2014-12-05T02:35:51.000Z</published>
-    <updated>2014-12-05T02:37:14.000Z</updated>
-    <content type="html"><![CDATA[<p>sdfs<br> gfgsdg<br>  sdfsgf<br>  sfgs   </p>
+    <title><![CDATA[Xcode 6生成ipa文件]]></title>
+    <link href="http://backafeng.github.io/2014/12/05/Xcode-6%E7%94%9F%E6%88%90ipa%E6%96%87%E4%BB%B6/"/>
+    <id>http://backafeng.github.io/2014/12/05/Xcode-6生成ipa文件/</id>
+    <published>2014-12-05T04:26:27.000Z</published>
+    <updated>2014-12-05T04:39:18.000Z</updated>
+    <content type="html"><![CDATA[<h4 id="随着Xcode6-1的普遍应用，随之而来的很多问题就会出现，这里来说一下如何在Xcode6-1上生成Ad-hoc_ipa。首先是要在你的开发者账号上生成一个。ipa的主要应用就是在你发布到AppStore之前，客户用来测试的。">随着Xcode6.1的普遍应用，随之而来的很多问题就会出现，这里来说一下如何在Xcode6.1上生成Ad-hoc ipa。首先是要在你的开发者账号上生成一个。ipa的主要应用就是在你发布到AppStore之前，客户用来测试的。</h4>
+<p>   好了，现在我们来说一下怎样在Xcode6.1下生成ipa文件。在这里，关于证书的配置，设备的添加就不在啰嗦的赘述了，直接从Ad-hoc profile生成开始。PS：如果你没有证书，请飞过。   </p>
+<ul>
+<li>首先，要在开发者中心进行Ad-hoc profile的配置和生成。并下载下来。</li>
+</ul>
+<p>按照上图的指引完成后，点击continue。   </p>
+<ul>
+<li><p>第二步：然后选择Ad-Hoc，也就是生成profile的类型。</p>
+<p>  选择Ad-Hoc之后点击continue。</p>
+</li>
+<li><p>第三步：之后来配置App ID；   </p>
+<p>  在选择了App ID之后点击continue继续下一步。</p>
+</li>
+<li><p>第四步：添加发布应用者账号。   </p>
+<p>  选择了发布者账号之后点击continue继续下一步。</p>
+</li>
+<li><p>第五步：选择可以安装这个ipa文件的设备。（这里的设备都是你之前添加过UUID的设备）</p>
+<p>  完成之后点击continue继续下一步。</p>
+</li>
+<li><p>第六步：给你的Ad-Hoc profile文件添加名称。   </p>
+<p>  填写名称之后，点击Generate生成profile文件。</p>
+</li>
+<li><p>第七步：下载这个profile文件到本地。   </p>
+<p>  至此，Ad-Hoc Profile 文件的配置就已经完成。   </p>
+<p>  打开应用程序，双击Ad-Hoc Profile文件，就将该文件添加到了该应用中。然后点击file— &gt;show in Finder ,然后将上面生成的Profile文件复制到该文件夹下面。如图：</p>
+</li>
+</ul>
+<h4 id="下面我们就来说一下如何将程序进行成功的配置。">下面我们就来说一下如何将程序进行成功的配置。</h4>
+<ul>
+<li><p>1.点击Project，然后点击右侧的target（如本图的SFDownListAnimation）选择成project，然后点击info，在info下面configuration下添加一项，选择Duplicate “release” Configuration；然后添加命名。过程如图：</p>
+<p>  图一：</p>
+</li>
+</ul>
+<pre><code>图二：
+
+
+图三：
+
+
+图四：Project -&gt;info选项配置结束后如下图。
+</code></pre><ul>
+<li>2.当Project -&gt;info 配置结束后，选择的过程是：将Project改成Target，然后Target — &gt;build Setting —&gt;Code Signing,进行数据的配置。记住，不要去更改Debug和Release的配置。只要将ad-hoc Profile进行配置就行了。如图所示：</li>
+</ul>
+<ul>
+<li>3.打开info-plist文件（注意：这里容易出错,错误就是没有看清楚而打开的时test info-plist文件），这里一定是info-plist文件，而不是test info-plist文件。将plist文件中得 Application requires iPhone environment 项设置为YES，如果没有就添加这一项，并设置为YES。如图：</li>
+</ul>
+<ul>
+<li>4.点击Product— &gt;Scheme—&gt;Edit Scheme ，进去之后在左边栏选择Archive，然后将Build Configuration 设置为你添加的Profile（在这里是ad-hoc Profile），然后点击close。</li>
+</ul>
+<ul>
+<li>5.将target选择为Device，如果不是选择Device，在Product中Archive是不能够点击的，设置如图：</li>
+</ul>
+<ul>
+<li>6.点击Product— &gt;Archive,如果成功则会弹出Organizer—Archives界面，选择Export。如图：</li>
+</ul>
+<ul>
+<li>7.弹出界面后，选择Save for Ad Hoc Deployment,点击next。</li>
+</ul>
+<ul>
+<li>8.选择开发团队账号，点击choose。</li>
+</ul>
+<ul>
+<li>9.核对相关的发布信息，点击Export，生成ipa文件。</li>
+</ul>
+<ul>
+<li><p>10.为应用程序ipa文件选择位置和对ipa文件进行命名，这样就完成了利用Ad-hoc 生成ipa文件了。</p>
+</li>
+<li><p>11.然后双击ipa文件加入iTunes，就可以通过iTunes来安装应用程序了。而上一步生成的ipa文件就可以发给客户，即使客户没有Mac，只有windows电脑只需要双击该ipa文件即可将该应用程序加入到iTunes中，然后点击应用程序—&gt;安装—&gt;同步即可将该应用程序安装到iPhone上。</p>
+</li>
+</ul>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>sdfs<br> gfgsdg<br>  sdfsgf<br>  sfgs   </p>
-]]>
+    <![CDATA[<h4 id="随着Xcode6-1的普遍应用，随之而来的很多问题就会出现，这里来说一下如何在Xcode6-1上生成Ad-hoc_ipa。首先是要在你的开发者账号上生成一个。ipa的主要应用就是在你发布到AppStore之前，客户用来测试的。">随着Xcode6.1的普遍应用，随]]>
     </summary>
     
-      <category term="iOS blog" scheme="http://backafeng.github.io/categories/iOS-blog/"/>
+      <category term="Ad-hoc,iOS ad hoc生成ipa，ipa,Xcode ipa" scheme="http://backafeng.github.io/tags/Ad-hoc-iOS-ad-hoc%E7%94%9F%E6%88%90ipa%EF%BC%8Cipa-Xcode-ipa/"/>
     
-  </entry>
-  
-  <entry>
-    <title><![CDATA[is my test ]]></title>
-    <link href="http://backafeng.github.io/2014/12/05/is-my-test/"/>
-    <id>http://backafeng.github.io/2014/12/05/is-my-test/</id>
-    <published>2014-12-05T02:32:11.000Z</published>
-    <updated>2014-12-05T02:34:05.000Z</updated>
-    <content type="html"><![CDATA[]]></content>
-    <summary type="html">
-    <![CDATA[]]>
-    </summary>
-    
-      <category term="Object-C" scheme="http://backafeng.github.io/tags/Object-C/"/>
-    
-      <category term="iOS blog" scheme="http://backafeng.github.io/categories/iOS-blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[test Demo]]></title>
-    <link href="http://backafeng.github.io/2014/12/05/test-Demo/"/>
-    <id>http://backafeng.github.io/2014/12/05/test-Demo/</id>
-    <published>2014-12-05T02:04:14.000Z</published>
-    <updated>2014-12-05T02:06:13.000Z</updated>
-    <content type="html"><![CDATA[<p>sdf<br>sad<br>f<br>sd<br>f<br>asd<br>fa<br>sdf<br>s<br>df<br>sad<br>f<br>sd<br>f<br>d<br>fds<br>f<br>s<br>df<br>ds<br>fds<br>f<br>ds<br>fd<br>sf<br>sd<br>f<br>sdf<br>sd<br>f<br>sdf<br>ds<br>f<br>s<br>fs<br>f<br>sd<br>fs<br>df<br>s<br>f<br>sf<br>s<br>df<br>sd<br>f<br>sdf<br>s<br>f<br>sd<br>f<br>sdf<br>sd<br>f<br>s<br>fs<br>df<br>s<br>df<br>ds       </p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>sdf<br>sad<br>f<br>sd<br>f<br>asd<br>fa<br>sdf<br>s<br>df<br>sad<br>f<br>sd<br>f<br>d<br>fds<br>f<br>s<br>df<br>ds<br>fds<br>f<br>ds<br>f]]>
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <link href="http://backafeng.github.io/2014/12/04/hello-world/"/>
-    <id>http://backafeng.github.io/2014/12/04/hello-world/</id>
-    <published>2014-12-04T06:59:20.000Z</published>
-    <updated>2014-12-04T06:59:20.000Z</updated>
-    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2>
-<h3 id="Create_a_new_post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
-    </summary>
+      <category term="iOS" scheme="http://backafeng.github.io/categories/iOS/"/>
     
   </entry>
   
